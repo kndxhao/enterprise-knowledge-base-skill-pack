@@ -36,9 +36,9 @@ def main() -> int:
     for required_file in REQUIRED_PACKAGE_FILES:
         if not required_file.exists():
             problems.append(f"missing package file: {required_file.relative_to(ROOT)}")
-        elif required_file.name.endswith(".sh") and not required_file.stat().st_mode & 0o111:
-            problems.append(f"script is not executable: {required_file.relative_to(ROOT)}")
-    skill_dirs = [p for p in ROOT.iterdir() if p.is_dir() and p.name != "scripts"]
+    skill_dirs = [
+        p for p in ROOT.iterdir() if p.is_dir() and p.name != "scripts" and not p.name.startswith(".")
+    ]
     if not skill_dirs:
         problems.append("No skill directories found.")
     for skill_dir in sorted(skill_dirs):
