@@ -79,7 +79,7 @@ cd "/path/to/project"
 执行 dry run：
 
 ```bash
-./skills/scripts/install_to_codex_mac.sh --dry-run
+bash ./scripts/install_to_codex_mac.sh --dry-run
 ```
 
 预期效果：
@@ -98,7 +98,7 @@ Dry run only. Would install:
 确认 dry run 正常后执行：
 
 ```bash
-./skills/scripts/install_to_codex_mac.sh
+bash ./scripts/install_to_codex_mac.sh
 ```
 
 脚本会自动：
@@ -474,13 +474,13 @@ python3 skills/scripts/check_skill_pack.py
 
 ```bash
 python3 skills/scripts/check_skill_pack.py
-./skills/scripts/install_to_codex_mac.sh --dry-run
+bash ./scripts/install_to_codex_mac.sh --dry-run
 ```
 
 确认无误后再重新安装：
 
 ```bash
-./skills/scripts/install_to_codex_mac.sh
+bash ./scripts/install_to_codex_mac.sh
 ```
 
 如果这套 Skill Pack 进入商业交付，建议同步维护：
